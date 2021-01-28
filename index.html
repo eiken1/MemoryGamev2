@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/mg.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+<body>
+
+    <div id="main">
+        <div class="main-container">
+            <h1 class="title">Animal memory game</h1>
+
+            <div class="scoreboard">
+                <div>
+                    <label for="tries">Tries: </label>
+                    <span id="tries" name="tries">0</span>
+                </div>
+                <div>
+                    <label for="difficulty-btn">Change difficulty</label>
+                    <button class="difficulty-btn" name="difficulty-btn">Change</button>
+                </div>
+            </div>
+
+            <div class="board">
+                <ul id="card-container">
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-container">
+        <div id="intro-modal">
+            <h1 class="title large">The Memory Game</h1>
+            <button id="play-btn">PLAY</button>
+        </div>
+
+        <div id="difficulty-modal">
+            <h3>Select difficulty</h3>
+            <div class="difficulty-container">
+                <div class="difficulty-div">
+                    <button id="easy-diff" class="diff-btn">EASY</button>
+                    <span>4 pairs</span>
+                    <span>8 pieces</span>
+                </div>
+                <div class="difficulty-div">
+                    <button id="medium-diff" class="diff-btn">MEDIUM</button>
+                    <span>6 pairs</span>
+                    <span>12 pieces</span>
+                </div>
+                <div class="difficulty-div">
+                    <button id="hard-diff" class="diff-btn">HARD</button>
+                    <span>8 pairs</span>
+                    <span>16 pieces</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="congratulations-modal">
+        <div class="congratulations-div">
+            <span id="congratulations-message"></span>
+            <div>
+                <label for="diff-btn">Change difficulty</label>
+                <button class="difficulty-btn" name="diff-btn">Change</button>
+            </div>
+            <button id="close-modal">x</button>
+        </div>
+    </div>
+    <script src="js/eventListeners.js"></script>
+    <script src="js/mg.js"></script>
+</body>
+</html>
